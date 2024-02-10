@@ -1,14 +1,15 @@
 export type Pixels = {
-  colors: number[][]; // [x][y], 0 = transparent
+  colors: number[][]; // [y][x], 0 = transparent
   palette: number[];
 };
 
 export type Head = Pixels & {
-  eyeSocket: number[][]; // [x][y], 0 = transparent, 1 = eye socket
+  hasEyeSocket: boolean;
 };
 
 export type Character = {
   head: Head;
+  eye: number;
   hair: Pixels;
   body: Pixels;
   arm: Pixels;

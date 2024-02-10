@@ -1,4 +1,83 @@
-import { Head, Pixels } from "./types";
+import { Character, Head, Pixels } from "./types";
+import { Bitmap } from "./bitmap";
+
+export const kEyeSocket: Pixels = {
+  colors: [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+  ],
+  palette: [0, 1],
+};
+
+export const kEyeColors: number[] = [
+  16717576, // red
+  1580142, // navy blue
+  3180311, // green
+  2500134, // black
+  6029496, // purple
+  14389032, // orange
+];
+
+export const kHeads: Head[] = [
+  {
+    colors: [
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0],
+      [0, 0, 0, 0, 2, 2, 1, 1, 1, 1, 2, 2, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ],
+    palette: [0, 16772571, 16761545],
+    hasEyeSocket: true,
+  },
+  {
+    colors: [
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 2, 2, 1, 0, 0, 0, 0, 1, 2, 2, 0, 0, 0],
+      [0, 0, 0, 3, 3, 1, 1, 1, 1, 1, 1, 3, 3, 0, 0, 0],
+      [0, 0, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 0, 0],
+      [0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+      [0, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 4, 1, 1, 1, 0],
+      [0, 1, 4, 4, 1, 1, 1, 1, 1, 1, 1, 1, 4, 4, 1, 0],
+      [0, 0, 1, 1, 4, 1, 1, 1, 1, 1, 1, 4, 1, 1, 0, 0],
+      [0, 0, 0, 0, 1, 4, 4, 4, 4, 4, 4, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ],
+    palette: [0, 8453888, 15389212, 3883324, 4092444],
+    hasEyeSocket: false,
+  },
+];
 
 export const kHairs: Pixels[] = [
   {
@@ -163,3 +242,58 @@ export const kArms: Pixels[] = [
     palette: [0, 16772571],
   },
 ];
+
+export interface Random {
+  next(max: number): number;
+}
+
+export const kDefaultRandom: Random = {
+  next: (max: number) => {
+    return Math.floor(Math.random() * (max + 1));
+  },
+};
+
+export function generate(gen: Random): Character {
+  const head = kHeads[gen.next(kHeads.length - 1)];
+  const eye = kEyeColors[gen.next(kEyeColors.length - 1)];
+  const body = kBodies[gen.next(kBodies.length - 1)];
+  const hair = kHairs[gen.next(kHairs.length - 1)];
+  const arm = kArms[gen.next(kArms.length - 1)];
+  return {
+    head,
+    eye: head.hasEyeSocket ? eye : 0,
+    body,
+    hair,
+    arm,
+  };
+}
+
+function overlay(out: Bitmap, pixels: Pixels, fixed: number = 0) {
+  for (let y = 0; y < 16; y++) {
+    for (let x = 0; x < 16; x++) {
+      const idx = pixels.colors[y][x];
+      const rgb = pixels.palette[idx];
+      if (rgb !== 0) {
+        if (fixed === 0) {
+          out.set(x, y, rgb);
+        } else {
+          out.set(x, y, fixed);
+        }
+      }
+    }
+  }
+}
+
+export function image(character: Character): Bitmap {
+  const out = new Bitmap();
+  overlay(out, character.head);
+  if (character.head.hasEyeSocket) {
+    overlay(out, kEyeSocket, character.eye);
+  }
+  overlay(out, character.body);
+  if (character.head.hasEyeSocket) {
+    overlay(out, character.hair);
+  }
+  overlay(out, character.arm);
+  return out;
+}
