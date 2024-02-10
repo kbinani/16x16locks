@@ -10,4 +10,12 @@ export class Bitmap<T> {
       }
     }
   }
+
+  get(x: number, y: number): T {
+    return this.bitmap[x][y];
+  }
+
+  set(x: number, y: number, v: T) {
+    this.bitmap[x][y] = v;
+  }
 }

@@ -6,7 +6,7 @@
   "repository": "https://github.com/kbinani/16x16locks.git",
   "scripts": {
     "build": "esbuild src/component/index.tsx --bundle --outfile=build/script/bundle.js --sourcemap=external --minify",
-    "fmt": "prettier --write '*.ts' 'src/**/*.ts' 'src/**/*.tsx'",
+    "fmt": "prettier --write '*.ts' 'src/**/*.ts' 'src/**/*.tsx' 'tool/**/*.ts'",
     "watch": "esbuild src/component/index.tsx --bundle --outfile=public/script/bundle.js --watch",
     "dev": "ts-node dev.ts"
   },
@@ -18,9 +18,11 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.16",
+    "@types/pngjs": "^6.0.4",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "esbuild": "^0.20.0",
+    "pngjs": "^7.0.0",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
