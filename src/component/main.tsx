@@ -1,6 +1,5 @@
 import * as React from "react";
-import { generate, image, kDefaultRandom } from "../preset";
-import { useMemo } from "react";
+import { generate, kDefaultRandom } from "../preset";
 import { CharacterComponent } from "./character";
 
 export const Main: React.FC = () => {

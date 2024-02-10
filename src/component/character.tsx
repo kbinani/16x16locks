@@ -1,7 +1,7 @@
+import * as React from "react";
 import { FC, useMemo } from "react";
 import { Character } from "../types";
 import { image } from "../preset";
-import * as React from "react";
 
 function range(max: number): number[] {
   const a: number[] = [];

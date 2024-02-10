@@ -1,5 +1,3 @@
-import { PNG } from "pngjs";
-import * as fs from "node:fs";
 import { Bitmap } from "../src/bitmap";
 import { Palette } from "../src/palette";
 

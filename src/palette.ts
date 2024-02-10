@@ -1,6 +1,5 @@
 import fs from "node:fs";
 import { PNG } from "pngjs";
-import { Bitmap } from "./bitmap";
 
 export class Palette<T> {
   private readonly _values: T[] = [];
