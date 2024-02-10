@@ -3,12 +3,8 @@ export type Pixels = {
   palette: number[];
 };
 
-export type Head = Pixels & {
-  hasEyeSocket: boolean;
-};
-
 export type Character = {
-  head: Head;
+  head: Pixels;
   eye: number;
   hair: Pixels;
   body: Pixels;
