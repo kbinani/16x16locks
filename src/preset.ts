@@ -1161,7 +1161,7 @@ export function image(character: Character): Bitmap {
   if (character.eye > 0) {
     overlay(out, kEyeSocket, character.eye);
   }
-  overlay(out, character.body);
   overlay(out, character.hair);
+  overlay(out, character.body);
   return out;
 }
