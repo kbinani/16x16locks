@@ -8,7 +8,6 @@ export type Character = {
   eye: number;
   hair: Pixels;
   body: Pixels;
-  arm: Pixels;
 };
 
 export function empty(): Pixels {
