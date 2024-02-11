@@ -42,7 +42,7 @@ export const CharacterComponent: FC<{ character: Character; size: number }> = ({
                 const a = rgb === 0 ? 0 : 1;
                 return (
                   <div
-                    key={`${x},${y}`}
+                    key={x}
                     style={{
                       minWidth: size,
                       minHeight: size,
