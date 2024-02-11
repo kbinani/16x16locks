@@ -78,7 +78,7 @@ export const kHeadFrog: Pixels = {
   palette: [0, 8453888, 15389212, 3883324, 4092444],
 };
 
-const kFrogChance = 1 / 20.0;
+const kFrogChance = 1 / 200.0;
 
 export const kHairs: Pixels[] = [
   {
